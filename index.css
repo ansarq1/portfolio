@@ -1,4 +1,4 @@
-*{
+* {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -6,47 +6,47 @@
 	color: whitesmoke;
 }
 
-h1, p{
+h1, p {
 	font-family: "Montserrat";
 }
 
-#profile{
+#profile {
 	height: 250px;
 	width: 250px;
 	border-radius: 25%;
 	filter: drop-shadow(-10px 6px 20px #222222);
 }
 
-body{
+body {
 	background-color: #000000;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
 	background-attachment: fixed;
 }
 
-section > h1{
+section > h1 {
 	width: 530.56px;
 	overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid whitesmoke;
+	white-space: nowrap;
+	border-right: 2px solid whitesmoke;
 	animation: typing 1s steps(12, end), cursor .2s steps(12, end) infinite, remove-border 0.1s 1s forwards;
 }
 
-section p{
+section p {
 	width: 265px;
 	overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid whitesmoke;
+	white-space: nowrap;
+	border-right: 2px solid whitesmoke;
 	animation: typing 1s steps(12, end), cursor .2s steps(12, end) infinite, remove-border 0.1s 1s forwards;
 }
 
 @keyframes typing {
-	from{
+	from {
 		width: 0;
 	}
 }
 
 @keyframes cursor {
-	50%{
+	50% {
 		border-color: transparent;
 	}
 }
@@ -57,7 +57,7 @@ section p{
 	}
 }
 
-footer{
+footer {
 	background-color: #222222;
 	display: flex;
 	justify-content: center;
@@ -69,17 +69,17 @@ footer{
 	left: 0;
 }
 
-.fa-solid, .fa-brands{
+.fa-solid, .fa-brands {
 	font-size: 1.7rem;
 	margin: 0 10px;
 }
 
-.fa-solid:hover, .fa-brands:hover{
+.fa-solid:hover, .fa-brands:hover {
 	opacity: 0.8;
 	transition: 0.15s;
 }
 
-#landing{
+#landing {
 	max-height: max-content;
 	display: flex;
 	justify-content: center;
@@ -87,19 +87,74 @@ footer{
 	flex-direction: column;
 }
 
-@media only screen and (max-width: 580px) {
-	section h1{
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 1024px) {
+	section > h1 {
+		width: 100%;
+		font-size: 1.5rem;
+	}
+
+	section p {
+		width: 100%;
 		font-size: 1.2rem;
 	}
 
-	section p{
-		font-size: 1rem;
+	#profile {
+		height: 220px;
+		width: 220px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	section > h1 {
+		width: 100%;
+		font-size: 1.4rem;
 	}
 
-	#profile{
+	section p {
+		width: 100%;
+		font-size: 1.1rem;
+	}
+
+	#profile {
 		height: 200px;
 		width: 200px;
 	}
 }
+
+@media only screen and (max-width: 580px) {
+	section > h1 {
+		width: 100%;
+		font-size: 1.2rem;
+	}
+
+	section p {
+		width: 100%;
+		font-size: 1rem;
+	}
+
+	#profile {
+		height: 180px;
+		width: 180px;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	section > h1 {
+		width: 100%;
+		font-size: 1rem;
+	}
+
+	section p {
+		width: 100%;
+		font-size: 0.9rem;
+	}
+
+	#profile {
+		height: 150px;
+		width: 150px;
+	}
+}
+
 
 /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23636363' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E"); */
