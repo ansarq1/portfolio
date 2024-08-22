@@ -17,6 +17,11 @@ h1, p {
 	display: none;
 }
 
+.loader-container{
+	height: 250px;
+	width: 250px;
+}
+
 .loader {
 	width: 50px;
 	aspect-ratio: 1;

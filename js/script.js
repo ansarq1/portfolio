@@ -1,7 +1,7 @@
 // loading animation
 document.addEventListener("DOMContentLoaded", function(){
     let image = document.querySelector("#profile");
-    let loading = document.querySelector(".loader");
+    let loading = document.querySelector(".loader-container");
 
     function hideLoader() {
         loading.style.display = "none";
