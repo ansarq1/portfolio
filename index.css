@@ -15,7 +15,20 @@ h1, p {
 	width: 250px;
 	border-radius: 25%;
 	filter: drop-shadow(-10px 6px 20px #222222);
+	display: none;
 }
+
+.loader {
+	width: 50px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	border: 8px solid;
+	border-color: #FAF9F6 transparent;
+	animation: l1 1s infinite;
+	transition: ease-in-out;
+}
+
+@keyframes l1 {to{transform: rotate(.5turn)}}
 
 body {
 	background-color: #000000;
