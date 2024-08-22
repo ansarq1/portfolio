@@ -22,7 +22,7 @@ function lightDark() {
     let name = document.querySelector("#name");
     let btn = document.querySelector("#workTogetherBtn");
 
-    header.classList.color = "black";
-    name.style.color = "black";
+    header.classList.toggle("dark-text");
+    name.classList.toggle("dark-text");
     document.body.classList.toggle("dark");
 }

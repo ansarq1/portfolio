@@ -41,6 +41,10 @@ body {
 	background-attachment: fixed;
 }
 
+.dark-text{
+	color: black;
+}
+
 section > h1 {
 	width: 530.56px;
 	overflow: hidden;
