@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: whitesmoke;
+}
+
+.loader-container {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader-container .loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #FAF9F6 transparent;
+  animation: l1 1s infinite;
+  transition: ease-in-out;
+}
+@keyframes l1 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+
+body {
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+body .section-container {
+  width: 100%;
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  transition: 0.15s;
+}
+body .section-container #landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+body .section-container #landing #profile {
+  height: 250px;
+  width: 250px;
+  border-radius: 25%;
+  display: none;
+}
+body .section-container #landing h1 {
+  width: 530.56px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid whitesmoke;
+  animation: typing 1s steps(12, end), cursor 0.2s steps(12, end) infinite, remove-border 0.1s 1s forwards;
+}
+body .section-container #landing p {
+  width: 265px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid whitesmoke;
+  animation: typing 1s steps(12, end), cursor 0.2s steps(12, end) infinite, remove-border 0.1s 1s forwards;
+}
+body .section-container .bio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+}
+body .section-container .certificates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+}
+body .section-container .contact-me {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+}
+body .section-container .contact-me div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 3px violet;
+  background-color: red;
+  width: 23vw;
+  height: 50vh;
+  flex-direction: column;
+}
+body .section-container .contact-me .fa-brands {
+  font-size: 3rem;
+}
+
+.dark {
+  background-color: #FAF6F9;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%237F7F7F' stroke-width='10' stroke-opacity='0.47'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+.dark-text {
+  color: black;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes remove-border {
+  to {
+    border-right: none;
+  }
+}
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 1024px) {
+  section > h1 {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  section p {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  #profile {
+    height: 220px;
+    width: 220px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  section > h1 {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+  section p {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  #profile {
+    height: 200px;
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  section > h1 {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  section p {
+    width: 100%;
+    font-size: 1rem;
+  }
+  #profile {
+    height: 180px;
+    width: 180px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  section > h1 {
+    width: 100%;
+    font-size: 1rem;
+  }
+  section p {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  #profile {
+    height: 150px;
+    width: 150px;
+  }
+}
+/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23636363' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E"); */
+
+/*# sourceMappingURL=index.css.map */
