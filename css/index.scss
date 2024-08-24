@@ -107,11 +107,18 @@ body {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				border: solid 3px violet;
-				background-color: red;
+				background: linear-gradient(180deg, #222222a9, #4b4b4b);
+				backdrop-filter: blur(1px);
+				border-radius: 3px;
 				width: 23vw;
 				height: 50vh;
 				flex-direction: column;
+				overflow: hidden;
+				gap: 2vh;
+
+				h2{
+					font-size: 1.2rem;
+				}
 			}
 			
 			.fa-brands{

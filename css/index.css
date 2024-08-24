@@ -100,11 +100,17 @@ body .section-container .contact-me div {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 3px violet;
-  background-color: red;
+  background: linear-gradient(180deg, rgba(34, 34, 34, 0.662745098), #4b4b4b);
+  backdrop-filter: blur(1px);
+  border-radius: 3px;
   width: 23vw;
   height: 50vh;
   flex-direction: column;
+  overflow: hidden;
+  gap: 2vh;
+}
+body .section-container .contact-me div h2 {
+  font-size: 1.2rem;
 }
 body .section-container .contact-me .fa-brands {
   font-size: 3rem;
