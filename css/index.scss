@@ -113,16 +113,31 @@ body {
 				width: 23vw;
 				height: 50vh;
 				flex-direction: column;
-				overflow: hidden;
 				gap: 2vh;
 
 				h2{
 					font-size: 1.2rem;
 				}
 			}
+
+			div:hover{
+				h2{
+					opacity: 0.8;
+				}
+
+				.fa-brands{
+					animation: slide-from-bottom 1s ease-in forwards;
+				}
+			}
+
+			div:not(:hover){
+				.fa-brands{
+					animation: slide-back 0.5s linear forwards;
+				}
+			}
 			
 			.fa-brands{
-				font-size: 3rem;
+				font-size: 5rem;
 			}
 		}
 	}
@@ -136,6 +151,24 @@ body {
 
 .dark-text{
 	color: black;
+}
+
+@keyframes slide-from-bottom {
+	0%{
+		transform: translateY(0%);
+	}
+	100%{
+		transform: translateY(-180%);
+	}
+}
+
+@keyframes slide-back {
+	0%{
+		transform: translateY(-180%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
 }
 
 @keyframes typing {

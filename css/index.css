@@ -106,14 +106,22 @@ body .section-container .contact-me div {
   width: 23vw;
   height: 50vh;
   flex-direction: column;
-  overflow: hidden;
   gap: 2vh;
 }
 body .section-container .contact-me div h2 {
   font-size: 1.2rem;
 }
+body .section-container .contact-me div:hover h2 {
+  opacity: 0.8;
+}
+body .section-container .contact-me div:hover .fa-brands {
+  animation: slide-from-bottom 1s ease-in forwards;
+}
+body .section-container .contact-me div:not(:hover) .fa-brands {
+  animation: slide-back 0.5s linear forwards;
+}
 body .section-container .contact-me .fa-brands {
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .dark {
@@ -126,6 +134,22 @@ body .section-container .contact-me .fa-brands {
   color: black;
 }
 
+@keyframes slide-from-bottom {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-180%);
+  }
+}
+@keyframes slide-back {
+  0% {
+    transform: translateY(-180%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 @keyframes typing {
   from {
     width: 0;
