@@ -26,3 +26,24 @@ function lightDark() {
     name.classList.toggle("dark-text");
     document.body.classList.toggle("dark");
 }
+
+function changeBioImage(){
+    let image = document.querySelector("#ansar-pic");
+    let imageList = [
+        '/images/me.png',
+        '/images/ansar.png'
+    ]
+    let index = 0;
+
+    setInterval(() => {
+        image.src = `${imageList[index]}`;
+        image.style.animation = "none";
+        void image.offsetWidth;
+        image.style.animation = "imageTransition 1s";
+        index = (index + 1) % imageList.length;
+    }, 3000);
+}
+
+window.onload = function() {
+    changeBioImage();
+}
