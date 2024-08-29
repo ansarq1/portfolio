@@ -250,16 +250,8 @@ body {
 	}
 
 	.contact-me{
-		flex-direction: row;
-		justify-content: space-between;
-
-		div{
-			flex: 1 1 40%;
-
-			.fa-brands{
-				font-size: 4rem;
-			}
-		}
+		display: grid;
+		grid-template-columns: 300px 300px;
 	}
 }
 
@@ -286,19 +278,6 @@ body {
 			}
 		}
 	}
-
-	.contact-me{
-		flex-direction: row;
-		justify-content: space-between;
-
-		div{
-			flex: 1 1 40%;
-
-			.fa-brands{
-				font-size: 3rem;
-			}
-		}
-	}
 }
 
 @media only screen and (max-width: 580px) {
@@ -316,19 +295,6 @@ body {
 		height: 180px;
 		width: 180px;
 	}
-
-	.contact-me{
-		flex-direction: row;
-		justify-content: space-between;
-
-		div{
-			flex: 1 1 40%;
-
-			.fa-brands{
-				font-size: 2rem;
-			}
-		}
-	}
 }
 
 @media only screen and (max-width: 375px) {
@@ -345,18 +311,5 @@ body {
 	#profile {
 		height: 150px;
 		width: 150px;
-	}
-
-	.contact-me{
-		flex-direction: row;
-		justify-content: space-between;
-
-		div{
-			flex: 1 1 40%;
-
-			.fa-brands{
-				font-size: 1rem;
-			}
-		}
 	}
 }

@@ -30,8 +30,8 @@ function lightDark() {
 function changeBioImage(){
     let image = document.querySelector("#ansar-pic");
     let imageList = [
-        '/images/me.png',
-        '/images/ansar.png'
+        '../images/me.png',
+        '../images/ansar.png'
     ]
     let index = 0;
 
