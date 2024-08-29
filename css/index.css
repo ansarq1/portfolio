@@ -119,7 +119,10 @@ body .section-container .contact-me {
   scroll-snap-align: start;
   flex-wrap: wrap;
 }
-body .section-container .contact-me div {
+body .section-container .contact-me a {
+  text-decoration: none;
+}
+body .section-container .contact-me a div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,22 +134,19 @@ body .section-container .contact-me div {
   flex-direction: column;
   gap: 2vh;
 }
-body .section-container .contact-me div a {
-  text-decoration: none;
-}
-body .section-container .contact-me div h2 {
+body .section-container .contact-me a div h2 {
   font-size: 1.2rem;
 }
-body .section-container .contact-me div .fa-brands {
+body .section-container .contact-me a div .fa-brands {
   font-size: 5rem;
 }
-body .section-container .contact-me div:hover h2 {
+body .section-container .contact-me a div:hover h2 {
   opacity: 0.8;
 }
-body .section-container .contact-me div:hover .fa-brands {
+body .section-container .contact-me a div:hover .fa-brands {
   animation: slide-from-bottom 0.5s ease-in forwards;
 }
-body .section-container .contact-me div:not(:hover) .fa-brands {
+body .section-container .contact-me a div:not(:hover) .fa-brands {
   animation: slide-back 0.5s linear forwards;
 }
 
@@ -204,33 +204,32 @@ body .section-container .contact-me div:not(:hover) .fa-brands {
 }
 /* Media Queries for Responsiveness */
 @media only screen and (max-width: 1024px) {
-  section > h1 {
+  #landing h1 {
     width: 100%;
     font-size: 1.5rem;
   }
-  section p {
-    width: 100%;
-    font-size: 1.2rem;
-  }
-  #profile {
-    height: 220px;
-    width: 220px;
-  }
-  .contact-me {
-    display: grid;
-    grid-template-columns: 300px 300px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  section > h1 {
-    width: 100%;
-    font-size: 1.4rem;
-  }
-  section p {
+  #landing p {
     width: 100%;
     font-size: 1.1rem;
   }
-  #profile {
+  #landing #profile {
+    height: 220px;
+    width: 220px;
+  }
+  .contact-me div a {
+    color: #000000;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #landing h1 {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+  #landing p {
+    width: 100%;
+    font-size: 1rem;
+  }
+  #landing #profile {
     height: 200px;
     width: 200px;
   }
@@ -239,29 +238,29 @@ body .section-container .contact-me div:not(:hover) .fa-brands {
   }
 }
 @media only screen and (max-width: 580px) {
-  section > h1 {
+  #landing h1 {
     width: 100%;
     font-size: 1.2rem;
   }
-  section p {
+  #landing p {
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-  #profile {
+  #landing #profile {
     height: 180px;
     width: 180px;
   }
 }
 @media only screen and (max-width: 375px) {
-  section > h1 {
-    width: 100%;
-    font-size: 1rem;
-  }
-  section p {
+  #landing h1 {
     width: 100%;
     font-size: 0.9rem;
   }
-  #profile {
+  #landing p {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  #landing #profile {
     height: 150px;
     width: 150px;
   }

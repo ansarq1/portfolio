@@ -130,44 +130,44 @@ body {
 			scroll-snap-align: start;
 			flex-wrap: wrap;
 
-			div{
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				background: linear-gradient(180deg, #222222a9, #4b4b4b);
-				backdrop-filter: blur(1px);
-				border-radius: 3px;
-				width: 23vw;
-				height: 50vh;
-				flex-direction: column;
-				gap: 2vh;
+			a{
+				text-decoration: none;
 
-				a{
-					text-decoration: none;
+				div{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background: linear-gradient(180deg, #222222a9, #4b4b4b);
+					backdrop-filter: blur(1px);
+					border-radius: 3px;
+					width: 23vw;
+					height: 50vh;
+					flex-direction: column;
+					gap: 2vh;
+	
+					h2{
+						font-size: 1.2rem;
+					}
+	
+					.fa-brands{
+						font-size: 5rem;
+					}
 				}
-
-				h2{
-					font-size: 1.2rem;
+	
+				div:hover{
+					h2{
+						opacity: 0.8;
+					}
+	
+					.fa-brands{
+						animation: slide-from-bottom 0.5s ease-in forwards;
+					}
 				}
-
-				.fa-brands{
-					font-size: 5rem;
-				}
-			}
-
-			div:hover{
-				h2{
-					opacity: 0.8;
-				}
-
-				.fa-brands{
-					animation: slide-from-bottom 0.5s ease-in forwards;
-				}
-			}
-
-			div:not(:hover){
-				.fa-brands{
-					animation: slide-back 0.5s linear forwards;
+	
+				div:not(:hover){
+					.fa-brands{
+						animation: slide-back 0.5s linear forwards;
+					}
 				}
 			}
 		}
@@ -234,43 +234,49 @@ body {
 
 /* Media Queries for Responsiveness */
 @media only screen and (max-width: 1024px) {
-	section > h1 {
-		width: 100%;
-		font-size: 1.5rem;
-	}
+	#landing{
+		h1 {
+			width: 100%;
+			font-size: 1.5rem;
+		}
 
-	section p {
-		width: 100%;
-		font-size: 1.2rem;
-	}
+		p{
+			width: 100%;
+			font-size: 1.1rem;
+		}
 
-	#profile {
-		height: 220px;
-		width: 220px;
+		#profile {
+			height: 220px;
+			width: 220px;
+		}
 	}
 
 	.contact-me{
-		display: grid;
-		grid-template-columns: 300px 300px;
+		div{
+			a{
+				color: #000000;
+			}
+		}
 	}
 }
 
 @media only screen and (max-width: 768px) {
-	section > h1 {
-		width: 100%;
-		font-size: 1.4rem;
-	}
+	#landing{
+		h1 {
+			width: 100%;
+			font-size: 1.4rem;
+		}
 
-	section p {
-		width: 100%;
-		font-size: 1.1rem;
-	}
+		p{
+			width: 100%;
+			font-size: 1rem;
+		}
 
-	#profile {
-		height: 200px;
-		width: 200px;
+		#profile {
+			height: 200px;
+			width: 200px;
+		}
 	}
-
 	.bio{
 		.bio-text-image-container{
 			.bio-image-container{
@@ -281,35 +287,39 @@ body {
 }
 
 @media only screen and (max-width: 580px) {
-	section > h1 {
-		width: 100%;
-		font-size: 1.2rem;
-	}
+	#landing{
+		h1 {
+			width: 100%;
+			font-size: 1.2rem;
+		}
 
-	section p {
-		width: 100%;
-		font-size: 1rem;
-	}
+		p{
+			width: 100%;
+			font-size: 0.9rem;
+		}
 
-	#profile {
-		height: 180px;
-		width: 180px;
+		#profile {
+			height: 180px;
+			width: 180px;
+		}
 	}
 }
 
 @media only screen and (max-width: 375px) {
-	section > h1 {
-		width: 100%;
-		font-size: 1rem;
-	}
+	#landing{
+		h1 {
+			width: 100%;
+			font-size: 0.9rem;
+		}
 
-	section p {
-		width: 100%;
-		font-size: 0.9rem;
-	}
+		p{
+			width: 100%;
+			font-size: 0.8rem;
+		}
 
-	#profile {
-		height: 150px;
-		width: 150px;
+		#profile {
+			height: 150px;
+			width: 150px;
+		}
 	}
 }
