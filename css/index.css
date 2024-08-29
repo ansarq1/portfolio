@@ -133,6 +133,7 @@ body .section-container .contact-me a div {
   height: 50vh;
   flex-direction: column;
   gap: 2vh;
+  flex: 1;
 }
 body .section-container .contact-me a div h2 {
   font-size: 1.2rem;
@@ -216,9 +217,6 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
     height: 220px;
     width: 220px;
   }
-  .contact-me div a {
-    color: #000000;
-  }
 }
 @media only screen and (max-width: 768px) {
   #landing h1 {
@@ -232,9 +230,6 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
   #landing #profile {
     height: 200px;
     width: 200px;
-  }
-  .bio .bio-text-image-container .bio-image-container {
-    display: none;
   }
 }
 @media only screen and (max-width: 580px) {
@@ -250,6 +245,13 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
     height: 180px;
     width: 180px;
   }
+  .bio h1 {
+    position: absolute;
+    top: 5vh;
+  }
+  .bio .bio-text-image-container .bio-text-container {
+    font-size: 0.8rem;
+  }
 }
 @media only screen and (max-width: 375px) {
   #landing h1 {
@@ -263,6 +265,9 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
   #landing #profile {
     height: 150px;
     width: 150px;
+  }
+  .bio .bio-text-image-container .bio-text-container {
+    font-size: 0.7rem;
   }
 }
 
