@@ -245,10 +245,6 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
     height: 180px;
     width: 180px;
   }
-  .bio h1 {
-    position: absolute;
-    top: 5vh;
-  }
   .bio .bio-text-image-container .bio-text-container {
     font-size: 0.8rem;
   }
