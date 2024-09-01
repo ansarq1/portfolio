@@ -43,12 +43,66 @@ body .nav-bar ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 5vw;
   margin-bottom: 0;
   gap: 20px;
   list-style-type: none;
   height: 9vh;
   font-size: 1.1rem;
+  /* The switch - the box around the slider */
+  /* Hide default HTML checkbox */
+  /* The slider */
+  /* Rounded sliders */
+}
+body .nav-bar ul .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+body .nav-bar ul .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+body .nav-bar ul .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+body .nav-bar ul .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+body .nav-bar ul input:checked + .slider {
+  background-color: #2196F3;
+}
+body .nav-bar ul input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+body .nav-bar ul input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+body .nav-bar ul .slider.round {
+  border-radius: 34px;
+}
+body .nav-bar ul .slider.round:before {
+  border-radius: 50%;
 }
 body .nav-bar a {
   text-decoration: none;
@@ -99,25 +153,12 @@ body .section-container .bio {
   scroll-snap-align: start;
   text-align: center;
 }
-body .section-container .bio .bio-text-image-container {
-  display: flex;
-}
-body .section-container .bio .bio-text-container {
+body .section-container .bio .p-container {
   width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
+  font-size: 1.5rem;
 }
-body .section-container .bio .bio-image-container {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .section-container .bio .bio-image-container img {
-  width: 50vh;
-  height: 50vh;
+body .section-container .bio .p-container span {
+  font-weight: bold;
 }
 body .section-container .certificates {
   display: flex;
@@ -176,7 +217,11 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
 }
 
 .dark-text {
-  color: black;
+  color: #222222;
+}
+
+.light-contact-me-card {
+  color: #222222;
 }
 
 @keyframes slide-from-bottom {
@@ -229,121 +274,49 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
     transform: rotate(360deg);
   }
 }
-/* Media Queries for Responsiveness */
-@media only screen and (max-width: 1024px) {
-  .nav-bar ul {
-    padding-right: 15px;
+@media screen and (max-width: 1024px) {
+  .bio p {
+    font-size: 1.3rem;
   }
-  #landing h1 {
-    width: 100%;
-    font-size: 1.5rem;
-  }
-  #landing p {
-    width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .bio p {
     font-size: 1.1rem;
   }
-  #landing #profile {
-    height: 220px;
-    width: 220px;
+}
+@media screen and (max-width: 453px) {
+  .nav-bar ul li {
+    font-size: 1rem;
+  }
+  #landing h1 {
+    font-size: 1.5rem;
+  }
+  .bio p {
+    font-size: 0.9rem;
   }
 }
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 375px) {
+  .nav-bar ul li {
+    font-size: 0.8rem;
+  }
   #landing h1 {
-    width: 100%;
     font-size: 1.4rem;
   }
-  #landing p {
-    width: 100%;
-    font-size: 1rem;
-  }
-  #landing #profile {
-    height: 200px;
-    width: 200px;
-  }
-  .nav-bar {
-    font-size: 1rem;
-  }
-}
-@media only screen and (max-width: 580px) {
-  #landing h1 {
-    width: 100%;
-    font-size: 1.2rem;
-  }
-  #landing p {
-    width: 100%;
-    font-size: 0.9rem;
-  }
-  #landing #profile {
-    height: 180px;
-    width: 180px;
-  }
-  .nav-bar {
-    font-size: 1rem;
-  }
-  .bio .bio-text-image-container .bio-text-container {
+  .bio p {
     font-size: 0.8rem;
   }
 }
-@media only screen and (max-width: 425px) {
-  #landing h1 {
-    width: 100%;
-    font-size: 0.9rem;
-  }
-  #landing p {
-    width: 100%;
-    font-size: 0.8rem;
-  }
-  #landing #profile {
-    height: 150px;
-    width: 150px;
-  }
+@media screen and (max-width: 320px) {
   .nav-bar ul li {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
-  .bio .bio-text-image-container .bio-text-container {
-    font-size: 0.7rem;
-  }
-  .bio .bio-text-image-container .bio-image-container img {
-    display: none;
-  }
-}
-@media only screen and (max-width: 375px) {
   #landing h1 {
-    width: 100%;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
   }
   #landing p {
-    width: 100%;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
-  #landing #profile {
-    height: 150px;
-    width: 150px;
-  }
-  .nav-bar ul li {
-    font-size: 0.7rem;
-  }
-  .bio .bio-text-image-container .bio-text-container {
-    font-size: 0.7rem;
-  }
-}
-@media only screen and (max-width: 320px) {
-  #landing h1 {
-    width: 100%;
-    font-size: 0.9rem;
-  }
-  #landing p {
-    width: 100%;
-    font-size: 0.8rem;
-  }
-  #landing #profile {
-    height: 150px;
-    width: 150px;
-  }
-  .nav-bar ul li {
-    font-size: 0.5rem;
-  }
-  .bio .bio-text-image-container .bio-text-container {
+  .bio p {
     font-size: 0.7rem;
   }
 }

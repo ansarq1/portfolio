@@ -16,6 +16,7 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 		<!-- External CSS -->
 		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" href="css/media.css">
 		<title>Ansar Paguio | Web Developer Portfolio</title>
 	</head>
 	<body>
@@ -33,6 +34,12 @@
 				<a href="#contact-me">
 					<li>Contact Me</li>
 				</a>
+				<li>
+					<label class="switch">
+						<input type="checkbox" id="checkbox-dark-mode" onclick="lightDark()">
+						<span class="slider round"></span>
+					</label>
+				</li>
 			</ul>
 		</nav>
 		<!-- div creates a wrapper/container for our layout -->
@@ -52,24 +59,20 @@
 			</section>
 			<!-- bio section -->
 			<section class="bio" id="bio">
-				<h1>
+				<h1 class="about-me-section">
 					ABOUT ME
 				</h1>
-				<div class="bio-text-image-container">
-					<div class="bio-text-container">
-						<p class="bio-text">
-							Hi, I am Ansar D. Paguio, I am 22 years old and I live in Zamboanga City Philippines.
-							I graduated on Zamboanga Peninsula Polytechnic State University.<br>
-							Since I was a child I really wanted to be a Game Developer but when I am already on college I realized that building
-							a website is fun and I decided to pursue WEB DEVELOPMENT.<br>
-							I was also a Freelance App Developer I used Flutter and Firebase to build an app.
-							Right now I'm currently enhancing my skill on JavaScipt and ReactJS.
-							Thank you!
-						</p>
-					</div>
-					<div class = "bio-image-container">
-						<img src="images/me.png" alt="Ansar Picture" id="ansar-pic">
-					</div>
+				
+				<div class="p-container">
+					<p class="bio-text" id="bio-text">
+						Hi, I am Ansar D. Paguio, I am 22 years old and I live in Zamboanga City Philippines.
+						I graduated on Zamboanga Peninsula Polytechnic State University.<br>
+						Since I was a child I really wanted to be a Game Developer but when I am already on college I realized that building
+						a website is fun and I decided to pursue WEB DEVELOPMENT.<br>
+						I was also a Freelance App Developer I used <span>Flutter</span> and <span>Firebase</span> to build an app.
+						Right now I'm currently enhancing my skill on <span>JavaScript</span> and <span>ReactJS</span>.
+						Thank you!
+					</p>
 				</div>
 			</section>
 			<!-- certificates section -->

@@ -20,15 +20,29 @@ function lightDark() {
     let image = document.querySelector("#profile");
     let header = document.querySelector("#header");
     let name = document.querySelector("#name");
+    let contactMe = document.querySelector('#contact-me');
+    let bio = document.querySelector('#bio-text');
+    let aboutMeh1 = document.querySelector(".about-me-section")
     let btn = document.querySelector("#workTogetherBtn");
+    let darkModeButton = document.querySelector('#checkbox-dark-mode')
 
-    header.classList.toggle("dark-text");
-    name.classList.toggle("dark-text");
-    document.body.classList.toggle("dark");
+    if (darkModeButton.checked) {
+        header.classList.add("dark-text");
+        name.classList.add("dark-text");
+        document.body.classList.add("dark");
+        bio.classList.add("dark-text");
+        aboutMeh1.classList.add("dark-text");
+    } else {
+        header.classList.remove("dark-text");
+        name.classList.remove("dark-text");
+        document.body.classList.remove("dark");
+        bio.classList.remove("dark-text");
+        aboutMeh1.classList.remove("dark-text");
+    }
 }
 
 function changeBioImage(){
-    let image = document.querySelector("#ansar-pic");
+    let image = document.querySelector("#profile");
     let imageList = [
         'images/me.png',
         'images/ansar.png'
