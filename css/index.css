@@ -36,6 +36,23 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
+body .nav-bar {
+  background-color: rgba(68, 68, 68, 0.8431372549);
+}
+body .nav-bar ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 30px;
+  margin-bottom: 0;
+  gap: 20px;
+  list-style-type: none;
+  height: 9vh;
+  font-size: 1.1rem;
+}
+body .nav-bar a {
+  text-decoration: none;
+}
 body .section-container {
   width: 100%;
   height: 100%;
@@ -134,6 +151,7 @@ body .section-container .contact-me a div {
   flex-direction: column;
   gap: 2vh;
   flex: 1;
+  z-index: 5;
 }
 body .section-container .contact-me a div h2 {
   font-size: 1.2rem;
@@ -203,8 +221,19 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
     opacity: 1;
   }
 }
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* Media Queries for Responsiveness */
 @media only screen and (max-width: 1024px) {
+  .nav-bar ul {
+    padding-right: 15px;
+  }
   #landing h1 {
     width: 100%;
     font-size: 1.5rem;
@@ -231,6 +260,9 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
     height: 200px;
     width: 200px;
   }
+  .nav-bar {
+    font-size: 1rem;
+  }
 }
 @media only screen and (max-width: 580px) {
   #landing h1 {
@@ -245,8 +277,34 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
     height: 180px;
     width: 180px;
   }
+  .nav-bar {
+    font-size: 1rem;
+  }
   .bio .bio-text-image-container .bio-text-container {
     font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  #landing h1 {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  #landing p {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  #landing #profile {
+    height: 150px;
+    width: 150px;
+  }
+  .nav-bar ul li {
+    font-size: 0.8rem;
+  }
+  .bio .bio-text-image-container .bio-text-container {
+    font-size: 0.7rem;
+  }
+  .bio .bio-text-image-container .bio-image-container img {
+    display: none;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -261,6 +319,29 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
   #landing #profile {
     height: 150px;
     width: 150px;
+  }
+  .nav-bar ul li {
+    font-size: 0.7rem;
+  }
+  .bio .bio-text-image-container .bio-text-container {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #landing h1 {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  #landing p {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  #landing #profile {
+    height: 150px;
+    width: 150px;
+  }
+  .nav-bar ul li {
+    font-size: 0.5rem;
   }
   .bio .bio-text-image-container .bio-text-container {
     font-size: 0.7rem;
