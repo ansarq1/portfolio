@@ -179,6 +179,7 @@ body .section-container .contact-me {
 }
 body .section-container .contact-me a {
   text-decoration: none;
+  display: flex;
 }
 body .section-container .contact-me a div {
   display: flex;
@@ -191,7 +192,6 @@ body .section-container .contact-me a div {
   height: 50vh;
   flex-direction: column;
   gap: 2vh;
-  flex: 1;
   z-index: 5;
 }
 body .section-container .contact-me a div h2 {
@@ -282,6 +282,9 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
 @media screen and (max-width: 768px) {
   .bio p {
     font-size: 1.1rem;
+  }
+  .contact-me {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 453px) {
