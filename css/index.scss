@@ -2,9 +2,9 @@ $section-height: 100vh;
 $section-width: 99vw;
 $laptop: 1024px;
 $tablet: 768px;
-$large-mobile: 453px;
-$medium-mobile: 375px;
-$small-mobile: 320px;
+$large-mobile: 503px;
+$medium-mobile: 453px;
+$small-mobile: 351px;
 
 * {
 	box-sizing: border-box;
@@ -43,7 +43,12 @@ body {
 	overflow-x: hidden;
 
 	.nav-bar{
-		background-color: #444444d7;
+		background-color: #333333;
+		backdrop-filter: blur(3px);
+		position: fixed;
+		left: 0;
+		right: 0;
+		z-index: 5;
 		
 		ul{
 			display: flex;
@@ -187,7 +192,7 @@ body {
 
 		}
 
-		.certificates{
+		.projects{
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -198,16 +203,21 @@ body {
 
 		.contact-me{
 			display: flex;
-			justify-content: space-evenly;
+			justify-content: center;
 			align-items: center;
-			height: $section-height;
-			width: $section-width;
-			scroll-snap-align: start;
+			gap: 2rem;
 			flex-wrap: wrap;
+			padding: 2rem;
+			height: $section-height;
+			width: 100%;
+			scroll-snap-align: start;
 
 			a{
 				text-decoration: none;
 				display: flex;
+				flex: 1 1 250px;
+				max-width: 300px;
+				margin: 1rem;
 
 				div{
 					display: flex;
@@ -215,19 +225,19 @@ body {
 					align-items: center;
 					background: linear-gradient(180deg, #222222a9, #4b4b4b);
 					backdrop-filter: blur(1px);
-					border-radius: 3px;
-					width: 23vw;
+					border-radius: 8px;
+					width: 100%;
 					height: 50vh;
 					flex-direction: column;
-					gap: 2vh;
-					z-index: 5;
+					gap: 1rem;
 	
 					h2{
 						font-size: 1.2rem;
+						margin: 0;
 					}
 	
 					.fa-brands{
-						font-size: 5rem;
+						font-size: 4rem;
 					}
 				}
 	
@@ -339,11 +349,9 @@ body {
 	}
 
 	.contact-me{
-		flex-direction: column;
-
 		a{
 			div{
-				
+				height: 40vh !important;
 			}
 		}
 	}
@@ -353,7 +361,17 @@ body {
 	.nav-bar{
 		ul{
 			li{
-				font-size: 1rem;
+				font-size: 0.9rem;
+			}
+
+			.switch{
+				width: 54px !important;
+				height: 28px !important;
+			}
+
+			.slider:before{
+				width: 20px !important;
+				height: 20px !important;
 			}
 		}
 	}
@@ -369,13 +387,18 @@ body {
 			font-size: 0.9rem;
 		}
 	}
+
+	.contact-me{
+		overflow: scroll;
+	}
+	
 }
 
 @media screen and (max-width: $medium-mobile) {
 	.nav-bar{
 		ul{
 			li{
-				font-size: 0.8rem;
+				font-size: 0.6rem;
 			}
 		}
 	}
@@ -397,7 +420,7 @@ body {
 	.nav-bar{
 		ul{
 			li{
-				font-size: 0.6rem;
+				font-size: 0.5rem;
 			}
 		}
 	}
@@ -409,6 +432,32 @@ body {
 
 		p{
 			font-size: 1.1rem;
+		}
+	}
+
+	.bio{
+		p{
+			font-size: 0.7rem;
+		}
+	}
+}
+
+@media screen and (max-width: 351px) {
+	.nav-bar{
+		ul{
+			li{
+				font-size: 0.4rem;
+			}
+		}
+	}
+
+	#landing{
+		h1{
+			font-size: 1.1rem;
+		}
+
+		p{
+			font-size: 1rem;
 		}
 	}
 

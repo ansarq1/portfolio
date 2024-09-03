@@ -37,7 +37,12 @@ body {
   overflow-x: hidden;
 }
 body .nav-bar {
-  background-color: rgba(68, 68, 68, 0.8431372549);
+  background-color: #333333;
+  backdrop-filter: blur(3px);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 5;
 }
 body .nav-bar ul {
   display: flex;
@@ -160,7 +165,7 @@ body .section-container .bio .p-container {
 body .section-container .bio .p-container span {
   font-weight: bold;
 }
-body .section-container .certificates {
+body .section-container .projects {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,16 +175,21 @@ body .section-container .certificates {
 }
 body .section-container .contact-me {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 99vw;
-  scroll-snap-align: start;
+  gap: 2rem;
   flex-wrap: wrap;
+  padding: 2rem;
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
 }
 body .section-container .contact-me a {
   text-decoration: none;
   display: flex;
+  flex: 1 1 250px;
+  max-width: 300px;
+  margin: 1rem;
 }
 body .section-container .contact-me a div {
   display: flex;
@@ -187,18 +197,18 @@ body .section-container .contact-me a div {
   align-items: center;
   background: linear-gradient(180deg, rgba(34, 34, 34, 0.662745098), #4b4b4b);
   backdrop-filter: blur(1px);
-  border-radius: 3px;
-  width: 23vw;
+  border-radius: 8px;
+  width: 100%;
   height: 50vh;
   flex-direction: column;
-  gap: 2vh;
-  z-index: 5;
+  gap: 1rem;
 }
 body .section-container .contact-me a div h2 {
   font-size: 1.2rem;
+  margin: 0;
 }
 body .section-container .contact-me a div .fa-brands {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 body .section-container .contact-me a div:hover h2 {
   opacity: 0.8;
@@ -283,13 +293,21 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
   .bio p {
     font-size: 1.1rem;
   }
-  .contact-me {
-    flex-direction: column;
+  .contact-me a div {
+    height: 40vh !important;
   }
 }
-@media screen and (max-width: 453px) {
+@media screen and (max-width: 503px) {
   .nav-bar ul li {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+  .nav-bar ul .switch {
+    width: 54px !important;
+    height: 28px !important;
+  }
+  .nav-bar ul .slider:before {
+    width: 20px !important;
+    height: 20px !important;
   }
   #landing h1 {
     font-size: 1.5rem;
@@ -297,10 +315,13 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
   .bio p {
     font-size: 0.9rem;
   }
+  .contact-me {
+    overflow: scroll;
+  }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 453px) {
   .nav-bar ul li {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   #landing h1 {
     font-size: 1.4rem;
@@ -309,15 +330,29 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
     font-size: 0.8rem;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 351px) {
   .nav-bar ul li {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
   #landing h1 {
     font-size: 1.3rem;
   }
   #landing p {
     font-size: 1.1rem;
+  }
+  .bio p {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 351px) {
+  .nav-bar ul li {
+    font-size: 0.4rem;
+  }
+  #landing h1 {
+    font-size: 1.1rem;
+  }
+  #landing p {
+    font-size: 1rem;
   }
   .bio p {
     font-size: 0.7rem;
