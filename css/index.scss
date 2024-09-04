@@ -6,6 +6,10 @@ $large-mobile: 503px;
 $medium-mobile: 453px;
 $small-mobile: 351px;
 
+html{
+	scroll-behavior: smooth;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -137,6 +141,7 @@ body {
 		scroll-snap-type: y mandatory;
 		overflow-y: scroll;
 		transition: 0.15s;
+		scroll-behavior: smooth;
 
 		#landing {
 			display: flex;
@@ -148,10 +153,47 @@ body {
 			scroll-snap-align: start;
 	
 			#profile {
-				height: 250px;
-				width: 250px;
+				height: 270px;
+				width: 270px;
 				border-radius: 25%;
 				display: none;
+				margin-bottom: 20px;
+			}
+
+			.div-buttons{
+				display: flex;
+				align-items: baseline;
+				gap: 10px;
+			}
+
+			.resume, #workTogetherBtn{
+				display: inline-block;
+				padding: 12px 20px;
+				font-size: 16px;
+				font-weight: 400;
+				height: 50px;
+				text-align: center;
+				vertical-align: middle;
+				text-decoration: none;
+				color: #222222;
+				background-color: #FAF6F9;
+				border-radius: 10px;
+				box-shadow: 5px 5px 5px #0a0909;
+				transition: all 0.3 ease;
+			}
+
+			.resume:hover, #workTogetherBtn:hover{
+				background-color: #fff;
+				color: #222222;
+				border: 2px solid #444444;
+				box-shadow: 5px 5px 0px #444444;
+			}
+
+			.resume:active, #workTogetherBtn:active{
+				background-color: #444444;
+				color: #FAF6F9;
+				box-shadow: none;
+				transform: translateY(4px);
 			}
 	
 			h1 {
@@ -179,7 +221,8 @@ body {
 			height: $section-height;
 			width: $section-width;
 			scroll-snap-align: start;
-			text-align: center;
+			text-align: justify;
+			letter-spacing: 1px;
 
 			.p-container{
 				width: 50%;
@@ -342,6 +385,17 @@ body {
 }
 
 @media screen and (max-width: $tablet) {
+
+	#landing{
+		.div-buttons{
+			a{
+				font-size: 14px !important;
+				height: 48px !important;
+				padding: 12px 16px !important;
+			}
+		}
+	}
+
 	.bio{
 		p{
 			font-size: 1.1rem;
@@ -379,6 +433,14 @@ body {
 	#landing{
 		h1{
 			font-size: 1.5rem;
+		}
+
+		.div-buttons{
+			a{
+				font-size: 14px !important;
+				height: 40px !important;
+				padding: 10px 16px !important;
+			}
 		}
 	}
 
@@ -458,6 +520,11 @@ body {
 
 		p{
 			font-size: 1rem;
+		}
+
+		.div-buttons{
+			display: flex;
+			flex-direction: column;
 		}
 	}
 

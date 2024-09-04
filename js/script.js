@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(){
         image.style.display = "block";
     }
 
-    // Check if the image is already loaded (from cache)
+    // Check if the image is already loaded
     if (image.complete) {
         hideLoader();
     } else {
@@ -16,13 +16,25 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 });
 
+//smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        })
+    })
+})
+
+
 function lightDark() {
     let image = document.querySelector("#profile");
     let header = document.querySelector("#header");
     let name = document.querySelector("#name");
     let contactMe = document.querySelector('#contact-me');
     let bio = document.querySelector('#bio-text');
-    let aboutMeh1 = document.querySelector(".about-me-section")
+    let aboutMeh1 = document.querySelector(".about-me-section");
     let btn = document.querySelector("#workTogetherBtn");
     let darkModeButton = document.querySelector('#checkbox-dark-mode')
 
