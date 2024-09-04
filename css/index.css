@@ -212,6 +212,25 @@ body .section-container .projects {
   width: 99vw;
   scroll-snap-align: start;
 }
+body .section-container .projects a {
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(180deg, rgba(34, 34, 34, 0.662745098), #4b4b4b);
+  height: 70vh;
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px #FAF6F9;
+  border-radius: 8px;
+}
+body .section-container .projects a img {
+  height: 45%;
+}
+body .section-container .projects a h1 {
+  font-size: 3rem;
+}
 body .section-container .contact-me {
   display: flex;
   justify-content: center;
@@ -341,6 +360,17 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
     height: 40vh !important;
   }
 }
+@media screen and (max-width: 560px) {
+  .projects a {
+    padding: 0px 20px !important;
+  }
+  .projects a h1 {
+    font-size: 2rem !important;
+  }
+  .projects a p {
+    font-size: 0.8rem !important;
+  }
+}
 @media screen and (max-width: 503px) {
   .nav-bar ul li {
     font-size: 0.9rem;
@@ -364,6 +394,15 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
   .bio p {
     font-size: 0.9rem;
   }
+  .projects a {
+    padding: 0px 20px !important;
+  }
+  .projects a h1 {
+    font-size: 2rem !important;
+  }
+  .projects a p {
+    font-size: 0.7rem !important;
+  }
   .contact-me {
     overflow: scroll;
   }
@@ -378,8 +417,17 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
   .bio p {
     font-size: 0.8rem;
   }
+  .projects a {
+    padding: 0px 20px !important;
+  }
+  .projects a h1 {
+    font-size: 2rem !important;
+  }
+  .projects a p {
+    font-size: 0.8rem !important;
+  }
 }
-@media screen and (max-width: 351px) {
+@media screen and (max-width: 435px) {
   .nav-bar ul li {
     font-size: 0.5rem;
   }
@@ -391,6 +439,19 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
   }
   .bio p {
     font-size: 0.7rem;
+  }
+  .projects a {
+    padding: 0px 20px !important;
+  }
+  .projects a img {
+    width: 50%;
+    height: 50%;
+  }
+  .projects a h1 {
+    font-size: 1.5rem !important;
+  }
+  .projects a p {
+    font-size: 0.6rem !important;
   }
 }
 @media screen and (max-width: 351px) {
@@ -409,6 +470,35 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
   }
   .bio p {
     font-size: 0.7rem;
+  }
+  .projects a {
+    padding: 0px 20px !important;
+  }
+  .projects a img {
+    width: 50%;
+    height: 50%;
+  }
+  .projects a h1 {
+    font-size: 1.5rem !important;
+  }
+  .projects a p {
+    font-size: 0.6rem !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  .projects a {
+    padding: 0px 20px !important;
+    width: 90%;
+  }
+  .projects a img {
+    width: 50%;
+    height: 50%;
+  }
+  .projects a h1 {
+    font-size: 1.5rem !important;
+  }
+  .projects a p {
+    font-size: 0.6rem !important;
   }
 }
 

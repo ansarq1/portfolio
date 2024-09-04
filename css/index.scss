@@ -4,7 +4,7 @@ $laptop: 1024px;
 $tablet: 768px;
 $large-mobile: 503px;
 $medium-mobile: 453px;
-$small-mobile: 351px;
+$small-mobile: 435px;
 
 html{
 	scroll-behavior: smooth;
@@ -242,6 +242,28 @@ body {
 			height: $section-height;
 			width: $section-width;
 			scroll-snap-align: start;
+
+			a{
+				text-align: center;
+				text-decoration: none;
+				background: linear-gradient(180deg, #222222a9, #4b4b4b);
+				height: 70vh;
+				padding: 0px 30px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				border: solid 2px #FAF6F9;
+				border-radius: 8px;
+
+				img{
+					height: 45%;
+				}
+
+				h1{
+					font-size: 3rem;
+				}
+			}
 		}
 
 		.contact-me{
@@ -411,6 +433,20 @@ body {
 	}
 }
 
+@media screen and (max-width: 560px) {
+	.projects{
+		a{
+			padding: 0px 20px !important;
+			h1{
+				font-size: 2rem !important;
+			}
+			p{
+				font-size: 0.8rem !important;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: $large-mobile) {
 	.nav-bar{
 		ul{
@@ -450,6 +486,18 @@ body {
 		}
 	}
 
+	.projects{
+		a{
+			padding: 0px 20px !important;
+			h1{
+				font-size: 2rem !important;
+			}
+			p{
+				font-size: 0.7rem !important;
+			}
+		}
+	}
+
 	.contact-me{
 		overflow: scroll;
 	}
@@ -476,6 +524,18 @@ body {
 			font-size: 0.8rem;
 		}
 	}
+
+	.projects{
+		a{
+			padding: 0px 20px !important;
+			h1{
+				font-size: 2rem !important;
+			}
+			p{
+				font-size: 0.8rem !important;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: $small-mobile) {
@@ -500,6 +560,22 @@ body {
 	.bio{
 		p{
 			font-size: 0.7rem;
+		}
+	}
+
+	.projects{
+		a{
+			padding: 0px 20px !important;
+			img{
+				width: 50%;
+				height: 50%;
+			}
+			h1{
+				font-size: 1.5rem !important;
+			}
+			p{
+				font-size: 0.6rem !important;
+			}
 		}
 	}
 }
@@ -531,6 +607,41 @@ body {
 	.bio{
 		p{
 			font-size: 0.7rem;
+		}
+	}
+
+	.projects{
+		a{
+			padding: 0px 20px !important;
+			img{
+				width: 50%;
+				height: 50%;
+			}
+			h1{
+				font-size: 1.5rem !important;
+			}
+			p{
+				font-size: 0.6rem !important;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.projects{
+		a{
+			padding: 0px 20px !important;
+			width: 90%;
+			img{
+				width: 50%;
+				height: 50%;
+			}
+			h1{
+				font-size: 1.5rem !important;
+			}
+			p{
+				font-size: 0.6rem !important;
+			}
 		}
 	}
 }
