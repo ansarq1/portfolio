@@ -113,6 +113,14 @@ body .nav-bar ul .slider.round {
 body .nav-bar ul .slider.round:before {
   border-radius: 50%;
 }
+body .nav-bar ul #burger-menu {
+  color: white;
+}
+body .nav-bar ul #burger-menu img {
+  width: 50px;
+  height: 30px;
+  filter: invert(100%);
+}
 body .nav-bar a {
   text-decoration: none;
 }
@@ -177,10 +185,10 @@ body .section-container #landing h1 {
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid whitesmoke;
-  animation: typing 1s steps(12, end), cursor 0.2s steps(12, end) infinite, remove-border 0.1s 1s forwards;
+  animation: typing-header 2s steps(12, end), cursor 0.2s steps(12, end) infinite, remove-border 0.1s 1s forwards;
 }
 body .section-container #landing p {
-  width: 265px;
+  width: 263px;
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid whitesmoke;
@@ -308,15 +316,20 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
     transform: translateY(0%);
   }
 }
+@keyframes typing-header {
+  0% {
+    width: 0;
+  }
+}
 @keyframes typing {
   0% {
     width: 0;
   }
   20% {
-    width: 300px;
+    width: 250px;
   }
   40% {
-    width: 100px;
+    width: 170px;
   }
   100% {
     width: 530.56px;
@@ -380,8 +393,9 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
     font-size: 0.8rem !important;
   }
 }
-@media screen and (max-width: 505px) {
+@media screen and (max-width: 542px) {
   .nav-bar ul li {
+    display: none;
     font-size: 0.9rem;
   }
   .nav-bar ul .switch {
@@ -391,6 +405,9 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
   .nav-bar ul .slider:before {
     width: 20px !important;
     height: 20px !important;
+  }
+  .nav-bar ul #burger-menu {
+    font-size: 1.5rem;
   }
   #landing h1 {
     font-size: 1.5rem;
@@ -437,9 +454,6 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
   }
 }
 @media screen and (max-width: 435px) {
-  .nav-bar ul li {
-    font-size: 0.5rem;
-  }
   #landing h1 {
     font-size: 1.3rem;
   }

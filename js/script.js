@@ -27,15 +27,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     })
 })
 
+//animation for typing
 document.addEventListener("DOMContentLoaded", function() {
     let name = document.querySelector("#name");
-    setTimeout(() => {
-        name.innerHTML = "Hi! My Name is Ansar Paguio.";    
-    }, 2000);
     
+    setTimeout(() => {
+        name.innerHTML = `Hi! My Name is Ansar Paguio.`;    
+    }, 2000);
     name.innerHTML = "Hi! My Name is Ansar Gwapo."
     
 })
+
+//bars/burger menu appear when the screen size = large-mobile
+document.addEventListener("DOMContentLoaded", function() {
+    let burgerMenu = document.querySelector('#burger-menu');
+
+    function burgerMenuAppear() {
+        let screenWidth = window.innerWidth;
+        if (screenWidth <= 542) {
+            burgerMenu.style.display = 'inline-block';
+        } else {
+            burgerMenu.style.display = 'none';
+        }
+    }
+
+    burgerMenuAppear();
+
+    window.onresize = burgerMenuAppear;
+})
+
 
 function lightDark() {
     let image = document.querySelector("#profile");
