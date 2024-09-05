@@ -27,6 +27,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     })
 })
 
+document.addEventListener("DOMContentLoaded", function() {
+    let name = document.querySelector("#name");
+    setTimeout(() => {
+        name.innerHTML = "Hi! My Name is Ansar Paguio.";    
+    }, 2000);
+    
+    name.innerHTML = "Hi! My Name is Ansar Gwapo."
+    
+})
 
 function lightDark() {
     let image = document.querySelector("#profile");
