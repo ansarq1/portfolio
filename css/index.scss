@@ -2,7 +2,7 @@ $section-height: 100vh;
 $section-width: 99vw;
 $laptop: 1024px;
 $tablet: 768px;
-$large-mobile: 503px;
+$large-mobile: 505px;
 $medium-mobile: 453px;
 $small-mobile: 435px;
 
@@ -508,7 +508,7 @@ body {
 	.nav-bar{
 		ul{
 			li{
-				font-size: 0.6rem;
+				display: none;
 			}
 		}
 	}
@@ -567,7 +567,7 @@ body {
 		a{
 			padding: 0px 20px !important;
 			img{
-				width: 50%;
+				width: 60%;
 				height: 50%;
 			}
 			h1{
@@ -612,9 +612,9 @@ body {
 
 	.projects{
 		a{
-			padding: 0px 20px !important;
+			padding: 0px 10px !important;
 			img{
-				width: 50%;
+				width: 60%;
 				height: 50%;
 			}
 			h1{

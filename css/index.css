@@ -371,7 +371,7 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
     font-size: 0.8rem !important;
   }
 }
-@media screen and (max-width: 503px) {
+@media screen and (max-width: 505px) {
   .nav-bar ul li {
     font-size: 0.9rem;
   }
@@ -409,7 +409,7 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
 }
 @media screen and (max-width: 453px) {
   .nav-bar ul li {
-    font-size: 0.6rem;
+    display: none;
   }
   #landing h1 {
     font-size: 1.4rem;
@@ -444,7 +444,7 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
     padding: 0px 20px !important;
   }
   .projects a img {
-    width: 50%;
+    width: 60%;
     height: 50%;
   }
   .projects a h1 {
@@ -472,10 +472,10 @@ body .section-container .contact-me a div:not(:hover) .fa-brands {
     font-size: 0.7rem;
   }
   .projects a {
-    padding: 0px 20px !important;
+    padding: 0px 10px !important;
   }
   .projects a img {
-    width: 50%;
+    width: 60%;
     height: 50%;
   }
   .projects a h1 {
