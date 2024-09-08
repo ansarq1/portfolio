@@ -143,7 +143,35 @@ body {
 
 		a{
 			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			opacity: 0.75;
+			position: relative;
+			padding: 20px 0px;
 		}
+
+		a:hover{
+			opacity: 1;
+		}
+		
+		a::before {
+			transition: 300ms;
+			height: 3px;
+			content: "";
+			position: absolute;
+			background-color: #FAF9F6;
+		}
+
+		a::before {
+			width: 0%;
+			bottom: 10px;
+		  }
+		  
+		a:hover::before {
+			width: 100%;
+		}
+
+		
 
 	}
 

@@ -123,6 +123,28 @@ body .nav-bar ul #burger-menu img {
 }
 body .nav-bar a {
   text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  opacity: 0.75;
+  position: relative;
+  padding: 20px 0px;
+}
+body .nav-bar a:hover {
+  opacity: 1;
+}
+body .nav-bar a::before {
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  background-color: #FAF9F6;
+}
+body .nav-bar a::before {
+  width: 0%;
+  bottom: 10px;
+}
+body .nav-bar a:hover::before {
+  width: 100%;
 }
 body .section-container {
   width: 100%;
