@@ -115,6 +115,7 @@ body .nav-bar ul .slider.round:before {
 }
 body .nav-bar ul #burger-menu {
   color: white;
+  display: none;
 }
 body .nav-bar ul #burger-menu img {
   width: 50px;

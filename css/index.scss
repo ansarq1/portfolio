@@ -130,6 +130,7 @@ body {
 
 			#burger-menu{
 				color: white;
+				display: none;
 				img{
 					
 					width: 50px;
@@ -170,9 +171,6 @@ body {
 		a:hover::before {
 			width: 100%;
 		}
-
-		
-
 	}
 
 	.section-container{
