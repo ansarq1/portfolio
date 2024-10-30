@@ -1,129 +1,16 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Google font -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-		<!-- Favicon -->
-		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-		<link rel="manifest" href="images/site.webmanifest">
-		<!-- Bootstrap CS -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-		<!-- tailwind CSS -->
-		<!-- <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"  rel="stylesheet" /> -->
-		<!-- External CSS -->
-		<link rel="stylesheet" type="text/css" href="css/index.css">
-		<link rel="stylesheet" href="css/media.css">
-		<title>Ansar Paguio | Web Developer Portfolio</title>
-	</head>
-	<body>
-		<nav class="nav-bar">
-			<ul id="nav-bar-ul">
-				<a href="#landing">
-					<li>Home</li>
-				</a>
-				<a href="#bio">
-					<li>About Me</li>
-				</a>
-				<a href="#projects">
-					<li>Projects</li>
-				</a>
-				<a href="#contact-me">
-					<li>Contact Me</li>
-				</a>
-				<li>
-					<label class="switch">
-						<input type="checkbox" id="checkbox-dark-mode" onclick="lightDark()">
-						<span class="slider round"></span>
-					</label>
-				</li>
-				<li id="burger-menu">
-					<img src="images/bars-solid.svg" alt="hamburger menu">
-				</li>
-			</ul>
-		</nav>
-		<!-- div creates a wrapper/container for our layout -->
-		<!-- class is an attribute name to our div (which group tags/elemts together)-->
-		<div class="section-container">
-			<!-- id is an attribute to name a tag uniquely -->
-			<section class="text-center mt-5" id="landing">
-				<h1 id="header">Frontend Web Developer</h1>
-				<p id="name"></p>
-				<img src="images/me.png" class="img-fluid" id="profile">
-				<div class="loader-container">
-					<div class="loader"></div>
-				</div>
-				<div class="div-buttons">
-					<a href="mailto:paguio.ansar@gmail.com" id="workTogetherBtn">
-						Let's Work Together
-					</a>
-					<a class="resume" href="src/ResumeAnsar.pdf" download>Download Resume</a>
-				</div>
-			</section>
-			<!-- bio section -->
-			<section class="bio" id="bio">
-				<h1 class="about-me-section">
-					ABOUT ME
-				</h1>
-				
-				<div class="p-container">
-					<p class="bio-text" id="bio-text">
-						Hi, I am Ansar D. Paguio, I am 22 years old and I live in Zamboanga City, Philippines. I graduated from Zamboanga Peninsula Polytechnic State University.
-						When I was a child I wanted to be a Game Developer but when I was already in college I realized that building a website is fun and I decided to pursue WEB DEVELOPMENT.
-						I was also a Freelance App Developer I used Flutter and Firebase to build an app. Right now I'm currently enhancing my skills in JavaScript and ReactJS Thank you!
-					</p>
-				</div>
-			</section>
-			<!-- certificates section -->
-			<section class="projects" id="projects">
-				<a href="https://ansarq1.github.io/js-game-dev" target="_blank">
-					<img src="images/2048.png" alt="2048">
-					<h1>2048</h1>
-					<p>A classic 2048, developed using HTML, CSS and JavaScript</p>
-				</a>
-			</section>
-			<!-- contact me section -->
-			<section class="contact-me" id="contact-me">
-				<a href="https://facebook.com/ansar.paguio.69" target="_blank">
-					<div class="contact-card">
-						<i class="fa-brands fa-facebook"></i>
-						<h2>Ansar</h2>
-					</div>
-				</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>This it tutorial</h1>
+    </center>
+    <iframe width="850" height="450" src="https://www.youtube.com/embed/videoseries?si=S9sSdtBkoMmHkM4T&amp;list=PLkcB17F5lN-UxdIitBuvOqinFN0O9txzV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 
-				<a href="#" target="_blank">
-					<div class="contact-card">
-						<i class="fa-brands fa-linkedin"></i>
-						<h2>Ansar Paguio</h2>
-					</div>
-				</a>
-
-				<a href="https://github.com/ansarq1" target="_blank">
-					<div class="contact-card">
-						<i class="fa-brands fa-github"></i>
-						<h2>ansarq1</h2>
-					</div>
-				</a>
-
-				<a href="#" target="_blank">
-					<div class="contact-card">
-						<i class="fa-brands fa-instagram"></i>
-						<h2>@_ansardalisay</h2>
-					</div>
-				</a>
-			</section>
-		</div>
-		<!-- Tidio -->
-		<script src="//code.tidio.co/yemddybnstr68yzxp8b6cbmhffyyipyi.js" async></script>
-		<script src="js/script.js"></script>
-		<!-- FontAwesome Kit Script -->
-		<script src="https://kit.fontawesome.com/bbd06f1996.js" crossorigin="anonymous"></script>
-		<!-- Bootstrap script -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	</body>
+    </iframe>
+</body>
 </html>
